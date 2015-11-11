@@ -8,6 +8,7 @@ function generateSphere(shape_no, position, color)
 	var trans = document.createElement("transform");
 	var trans_id = shape_no + "trans";
 	trans.setAttribute("id", trans_id);
+	trans.setAttribute("DEF", "ball");
 
 	trans.setAttribute("translation", position);
 
@@ -38,19 +39,29 @@ function generateSphere(shape_no, position, color)
 	shape_node.appendChild(app_node);
 	trans.appendChild(shape_node);
 	scene.appendChild(trans);
+
+	// time sensor
+	var time_sensor = document.createElement("timeSensor");
+	time_sensor.setAttribute("cycleInterval", "2");
+	time_sensor.setAttribute("loop", "true");
 }
 
 // first row of spheres
-generateSphere("0", "3,0,0", "green");
-generateSphere("0", "0,0,0", "green");
-generateSphere("0", "-3,0,0", "green");
+generateSphere("0", "3,0,0", "yellow");
+generateSphere("0", "0,0,0", "yellow");
+generateSphere("0", "-3,0,0", "yellow");
 
 // second row of spheres
-generateSphere("0", "3,0,-3","green");
-generateSphere("0", "0,0,-3","green");
-generateSphere("0", "-3,0,-3","green");
+generateSphere("0", "3,0,-3","orange");
+generateSphere("0", "0,0,-3","orange");
+generateSphere("0", "-3,0,-3","orange");
 
 // third row of spheres
-generateSphere("0", "3,0,-6","green");
-generateSphere("0", "0,0,-6","green");
-generateSphere("0", "-3,0,-6","green");
+generateSphere("0", "3,0,-6","red");
+generateSphere("0", "0,0,-6","red");
+generateSphere("0", "-3,0,-6","red");
+
+
+
+
+
