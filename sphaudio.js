@@ -96,7 +96,7 @@ function generateSphere(shape_no, x, y, z, color)
 	var time_sensor_id = shape_no + "time_route_id";
 	time_sensor.setAttribute("id", time_sensor_id);
 	time_sensor.setAttribute("DEF", "time");
-	time_sensor.setAttribute("cycleInterval", "2");
+	time_sensor.setAttribute("cycleInterval", "4");
 	time_sensor.setAttribute("loop", "true");
 
 	// position interpolator
@@ -107,7 +107,7 @@ function generateSphere(shape_no, x, y, z, color)
 	pos_interpolator.setAttribute("key", "0 0.5 1");
 
 	var frame_init = x + " 0 " + z;
-	var frame_peak = x + " 3 " + z;
+	var frame_peak = x + " 15 " + z;
 	var key_frames = frame_init + "  " + frame_peak + "  " + frame_init;
 	pos_interpolator.setAttribute("keyValue", key_frames);
 
@@ -137,27 +137,48 @@ function generateSphere(shape_no, x, y, z, color)
 }
 
 // first row of spheres
-generateSphere("0", "3","0","0", "yellow");
-generateSphere("1", "0","0","0", "yellow");
-generateSphere("2", "-3","0","0", "yellow");
+generateSphere("0", "6","0","3","red");
+generateSphere("1", "3","0","3","red");
+generateSphere("2", "0","0","3","red");
+generateSphere("3", "-3","0","3","red");
+generateSphere("4", "-6","0","3","red");
 
 // second row of spheres
-generateSphere("3", "3","0","-3","orange");
-generateSphere("4", "0","0","-3","orange");
-generateSphere("5", "-3","0","-3","orange");
+generateSphere("5", "6","0","6","red");
+generateSphere("6", "3","0","6","red");
+generateSphere("7", "0","0","6","red");
+generateSphere("8", "-3","0","6","red");
+generateSphere("9", "-6","0","6","red");
 
 // third row of spheres
-generateSphere("6", "3","0","-6","red");
-generateSphere("7", "0","0","-6","red");
-generateSphere("8", "-3","0","-6","red");
+generateSphere("10", "6","0","15", "yellow");
+generateSphere("11", "3","0","15", "yellow");
+generateSphere("12", "0","0","15", "yellow");
+generateSphere("13", "-3","0","15", "yellow");
+generateSphere("14", "-6","0","15", "yellow");
 
+// fourth row of spheres
+generateSphere("15", "6","0","12","orange");
+generateSphere("16", "3","0","12","orange");
+generateSphere("17", "0","0","12","orange");
+generateSphere("18", "-3","0","12","orange");
+generateSphere("19", "-6","0","12","orange");
 
+// fifth row of spheres
+generateSphere("20", "6","0","9","red");
+generateSphere("21", "3","0","9","red");
+generateSphere("22", "0","0","9","red");
+generateSphere("23", "-3","0","9","red");
+generateSphere("24", "-6","0","9","red");
+
+//               scake           x y z         color
 generateBackdrop("20 1 20", "9", "0","-2","0", "black");
-generateBackdrop("20 20 1", "10", "0","-2","-20", "black");
-generateBackdrop("1 20 20", "11", "-20","-2","-0", "black");
-generateBackdrop("1 20 20", "12", "20","-2","-0", "black");
-generateBackdrop("20 20 1", "12", "0","-2","20", "black");
-generateBackdrop("20 20 1", "12", "0","-2","20", "black");
+generateBackdrop("1 20 20", "11", "-20","0","-0", "black");
+generateBackdrop("1 20 20", "12", "20","0","0", "black");
+generateBackdrop("20 20 1", "12", "0","0","20", "black");
+generateBackdrop("20 20 1", "12", "0","0","20", "black");
 generateBackdrop("20 1 20", "12", "0","20","0", "black");
+
+
 
 
