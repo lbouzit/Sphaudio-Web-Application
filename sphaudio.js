@@ -58,14 +58,10 @@ function generateSphere(shape_no, x, y, z, color)
 	pos_interpolator.setAttribute("DEF", "move");
 	pos_interpolator.setAttribute("key", "0 0.5 1");
 
-	var frame_1 = x + " 0 " + z;
-	var frame_2 = x + " 3 " + z;
-
-	alert(frame_1 + "  " + frame_2 + "  " + frame_1);
-
-
-
-	pos_interpolator.setAttribute("keyValue", frame_1 + frame_2 + frame_1);
+	var frame_init = x + " 0 " + z;
+	var frame_peak = x + " 3 " + z;
+	var key_frames = frame_init + "  " + frame_peak + "  " + frame_init;
+	pos_interpolator.setAttribute("keyValue", key_frames);
 
 	// bind position interpolator to time sensor
 	var pos_route = document.createElement("route");
@@ -86,35 +82,24 @@ function generateSphere(shape_no, x, y, z, color)
 	time_route.setAttribute("toField", "translation");
 
 	// configure DOM tree for animation
-
-	/*
 	scene.appendChild(time_sensor);
 	scene.appendChild(pos_interpolator);
 	scene.appendChild(pos_route);
 	scene.appendChild(time_route);
-	*/
 	
 }
 
 // first row of spheres
 generateSphere("0", "3","0","0", "yellow");
-generateSphere("0", "0","0","0", "yellow");
-generateSphere("0", "-3","0","0", "yellow");
-
+generateSphere("1", "0","0","0", "yellow");
+generateSphere("2", "-3","0","0", "yellow");
 
 // second row of spheres
-generateSphere("0", "3","0","-3","orange");
-generateSphere("0", "0","0","-3","orange");
-generateSphere("0", "-3","0","-3","orange");
+generateSphere("3", "3","0","-3","orange");
+generateSphere("4", "0","0","-3","orange");
+generateSphere("5", "-3","0","-3","orange");
 
-/*
 // third row of spheres
-generateSphere("0", "3,0,-6","red");
-generateSphere("0", "0,0,-6","red");
-generateSphere("0", "-3,0,-6","red");
-*/
-
-
-
-
-
+generateSphere("6", "3","0","-6","red");
+generateSphere("7", "0","0","-6","red");
+generateSphere("8", "-3","0","-6","red");
