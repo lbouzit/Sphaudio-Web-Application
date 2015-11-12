@@ -1,3 +1,51 @@
+function generateBackdrop(scale, shape_no, x, y, z, color)
+{
+	// get position from x y z cordinates
+	var position = x + " " + y + " " + z;
+
+	// scene node
+	var scene = document.getElementById("scene");
+	scene.setAttribute("id", "scene");
+
+	// configure transformation
+	var trans = document.createElement("transform");
+	var trans_id = shape_no + "trans";
+	trans.setAttribute("id", trans_id);
+	trans.setAttribute("DEF", "ball");
+	trans.setAttribute("translation", position);
+	trans.setAttribute("scale", scale);
+
+	// configure shape
+	var shape_node = document.createElement("shape");
+	var shape_id = shape_no + "shape";
+	shape_node.setAttribute("id", shape_id);
+
+	// box node
+	var box_node = document.createElement("box");
+	var box_id = shape_no + "box";
+	box_node.setAttribute("id", box_id);
+
+	// app node
+	var app_node = document.createElement("appearance");
+	var app_id = shape_no + "app";
+	app_node.setAttribute("id", app_id);
+
+	// mat node
+	var mat_node = document.createElement("material");
+	var mat_id = shape_no + "mat";
+	mat_node.setAttribute("id", mat_node);
+	mat_node.setAttribute("diffuseColor", color);
+
+	// configure DOM tree
+	app_node.appendChild(mat_node);
+	shape_node.appendChild(box_node);
+	shape_node.appendChild(app_node);
+	trans.appendChild(shape_node);
+	scene.appendChild(trans);
+
+
+}
+
 function generateSphere(shape_no, x, y, z, color)
 {
 
@@ -86,7 +134,6 @@ function generateSphere(shape_no, x, y, z, color)
 	scene.appendChild(pos_interpolator);
 	scene.appendChild(pos_route);
 	scene.appendChild(time_route);
-	
 }
 
 // first row of spheres
@@ -103,3 +150,14 @@ generateSphere("5", "-3","0","-3","orange");
 generateSphere("6", "3","0","-6","red");
 generateSphere("7", "0","0","-6","red");
 generateSphere("8", "-3","0","-6","red");
+
+
+generateBackdrop("20 1 20", "9", "0","-2","0", "black");
+generateBackdrop("20 20 1", "10", "0","-2","-20", "black");
+generateBackdrop("1 20 20", "11", "-20","-2","-0", "black");
+generateBackdrop("1 20 20", "12", "20","-2","-0", "black");
+generateBackdrop("20 20 1", "12", "0","-2","20", "black");
+generateBackdrop("20 20 1", "12", "0","-2","20", "black");
+generateBackdrop("20 1 20", "12", "0","20","0", "black");
+
+
