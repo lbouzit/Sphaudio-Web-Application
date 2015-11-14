@@ -1,17 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
 <head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <title>Sphaudio</title>
 </head>
-<body>
 
-<div class="container">
-  <h1>My First Bootstrap Page</h1>
-  <p>This is some text.</p> 
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{{ url_for('main.main_route') }}">Sphaudio</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav navbar-right">
+          <li style="padding-top: 8px; padding-right: 8px;">
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Navigate
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a href="Customize.html">Home</a></li>
+              </ul>
+            </div>
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<body>
+	<div class="container">
+		<h1>My First Bootstrap Page</h1>
+		<p>This is some text.</p> 
+	</div>
+</body>
+
+
+<div style="position:fixed; left:0px; bottom:0px; padding: 5px; height:30px; width:100%;" class="panel-footer">
+Created by the Palet Team
 </div>
 
-</body>
-</html>
+
+
