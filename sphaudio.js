@@ -42,6 +42,7 @@ function generateBackdrop(scale, shape_no, x, y, z, color)
 	shape_node.appendChild(app_node);
 	trans.appendChild(shape_node);
 	scene.appendChild(trans);
+<<<<<<< HEAD
 
 
 }
@@ -56,6 +57,20 @@ function generateSphere(shape_no, x, y, z, color)
 	var scene = document.getElementById("scene");
 	scene.setAttribute("id", "scene");
 
+=======
+}
+
+function generateSphere(shape_no, x, y, z, color)
+{
+
+	// get position from x y z cordinates
+	var position = x + " " + y + " " + z;
+
+	// scene node
+	var scene = document.getElementById("scene");
+	scene.setAttribute("id", "scene");
+
+>>>>>>> master
 	// configure transformation
 	var trans = document.createElement("transform");
 	var trans_id = shape_no + "trans";
@@ -137,6 +152,7 @@ function generateSphere(shape_no, x, y, z, color)
 }
 
 // first row of spheres
+<<<<<<< HEAD
 generateSphere("0", "6","0","3","red");
 generateSphere("1", "3","0","3","red");
 generateSphere("2", "0","0","3","red");
@@ -182,3 +198,46 @@ generateBackdrop("20 1 20", "12", "0","20","0", "black");
 
 
 
+=======
+generateSphere("0", "6","0","3","green");
+generateSphere("1", "3","0","3","green");
+generateSphere("2", "0","0","3","green");
+generateSphere("3", "-3","0","3","green");
+generateSphere("4", "-6","0","3","green");
+
+// second row of spheres
+generateSphere("5", "6","0","6","green");
+generateSphere("6", "3","0","6","green");
+generateSphere("7", "0","0","6","green");
+generateSphere("8", "-3","0","6","green");
+generateSphere("9", "-6","0","6","green");
+
+// third row of spheres
+generateSphere("10", "6","0","15", "green");
+generateSphere("11", "3","0","15", "green");
+generateSphere("12", "0","0","15", "green");
+generateSphere("13", "-3","0","15", "green");
+generateSphere("14", "-6","0","15", "green");
+
+// fourth row of spheres
+generateSphere("15", "6","0","12","green");
+generateSphere("16", "3","0","12","green");
+generateSphere("17", "0","0","12","green");
+generateSphere("18", "-3","0","12","green");
+generateSphere("19", "-6","0","12","green");
+
+// fifth row of spheres
+generateSphere("20", "6","0","9","green");
+generateSphere("21", "3","0","9","green");
+generateSphere("22", "0","0","9","green");
+generateSphere("23", "-3","0","9","green");
+generateSphere("24", "-6","0","9","green");
+
+//               scake           x y z         color
+//generateBackdrop("20 1 20", "9", "0","-2","0", "blue");
+//generateBackdrop("1 20 20", "11", "-20","0","-0", "black");
+//generateBackdrop("1 20 20", "12", "20","0","0", "black");
+//generateBackdrop("20 20 1", "12", "0","0","20", "black");
+//generateBackdrop("20 20 1", "12", "0","0","20", "black");
+//generateBackdrop("20 1 20", "12", "0","20","0", "black");
+>>>>>>> master

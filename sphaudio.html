@@ -1,14 +1,47 @@
   <html> 
         <head> 
-            <title>SPHAUDIO WEB APPLICATION</title> 			
+            <title>SPHAUDIO</title> 			
             <script type='text/javascript' src='http://www.x3dom.org/download/x3dom.js'> </script> 
             <link rel='stylesheet' type='text/css' href='http://www.x3dom.org/download/x3dom.css'></link> 
-        </head> 
+
+              <meta name="viewport" content="width=device-width, initial-scale=1">
+              <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+              <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        </head>
+
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="{{ url_for('main.main_route') }}">Sphaudio</a>
+            </div>
+          <div>
+            <ul class="nav navbar-nav navbar-right">
+                <li style="padding-top: 8px; padding-right: 8px;">
+                  <div class="dropdown">
+                   <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Navigate
+                   <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href="Customize.html">Customization</a></li>
+                      <li><a href="Sphaudio.html">Sphadio</a></li>
+                    </ul>
+                  </div>
+                </li>
+          </ul>
+         </div>
+       </div>
+      </nav>
+
         <body> 
-            <h1>SPHAUDIO</h1> 
             <x3d width='600px' height='500px'>
             	<scene id ="scene">
+<<<<<<< HEAD
                      <Viewpoint id="front" position="0 10 -30" orientation="0.00000 -1.00000 0.00000 3.15833" description="camera"></Viewpoint>
+=======
+                    <background  skyColor="0 0 0"></background>
+                    <PointLight id='point' on='TRUE' intensity='0.9000' color='0.0 0.6 0.0' location='0 15 0 ' radius='100.0000' >  </PointLight> 
+                    <Viewpoint id="front" position="0 10 -30" orientation="0.00000 -1.00000 0.00000 3.15833" description="camera"></Viewpoint>
+>>>>>>> master
             	</scene>
             </x3d>
 
