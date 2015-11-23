@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" id="CustomizeStyle" type="text/css" href="">
     <title>Sphaudio</title>
 </head>
 
@@ -20,8 +21,8 @@
               <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Navigate
               <span class="caret"></span></button>
               <ul class="dropdown-menu">
+                <li><a href="Sphaudio.html">Sphaudio</a></li>
                 <li><a href="Customize.html">Customization</a></li>
-                <li><a href="Sphaudio.html">Sphadio</a></li>
               </ul>
             </div>
           </li>
@@ -48,39 +49,58 @@
     			</div>
     		</div>
     	</div>
-    	<div class="col-md-6 col-centered">
+    	<div class="col-md-9 col-centered">
     		<div class="row-fluid" style="margin-top:35px;">
-    			<img id="ThemeSample" src="" alt="Select a Theme!" style="width:400px;height:75px;">
+          <div style="background-color: white; padding: 5px;width:100%; ">
+    			 <img id="ThemeSample" src="" alt="Select a Theme!" style="width:100%;height:75px;">
+          </div>
     		</div>
     		<div class="row-fluid" style="margin-top:50px;">
-    			<button type="button" class="btn btn-info" onclick="ThemeClick(4)">Save Change</button>
+    			<button type="button" class="btn btn-info" onclick="ThemeSave()">Save Change</button>
     		</div>
     	</div>
 	</div>
 </body>
 
 <script type="text/javascript">
+  check = 0;
 	function ThemeClick(theme) {
 		if (theme === 1){
 			document.getElementById("ThemeSample").src = "Theme1.png";
 			document.getElementById("Theme1").class = "btn btn-info active";
+      check = 1;
 		}
 		if (theme === 2){
 			document.getElementById("ThemeSample").src = "Theme2.png";
+      check = 2;
 		}
 		if (theme === 3){
 			document.getElementById("ThemeSample").src = "Theme3.png";
+      check = 3;
 		}
 		if (theme === 4){
 			document.getElementById("ThemeSample").src = "Theme4.png";
+      check = 4;
 		}			
 	}
+  function ThemeSave() {
+    if (check === 1){
+      document.getElementById("CustomizeStyle").href = "Theme1.css"
+    }
+    if (check === 2){
+      document.getElementById("CustomizeStyle").href = "Theme2.css"
+    }
+    if (check === 3){
+      document.getElementById("CustomizeStyle").href = "Theme3.css"
+    }
+    if (check === 4){
+      document.getElementById("CustomizeStyle").href = "Theme4.css"
+    } 
+  }
 
 </script>
 
 <div style="position:fixed; left:0px; bottom:0px; padding: 5px; height:30px; width:100%;" class="panel-footer">
 Created by the Palet Team
 </div>
-
-
 
