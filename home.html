@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <title>Sphaudio Main Page</title>       
+    <script type='text/javascript' src='http://www.x3dom.org/download/x3dom.js'> </script> 
+    <link rel='stylesheet' type='text/css' href='http://www.x3dom.org/download/x3dom.css'></link> 
+
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="sphaudio_style.css">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="{{ url_for('main.main_route') }}">Sphaudio</a>
+  </div>
+  <div>
+    <ul class="nav navbar-nav navbar-right">
+        <li style="padding-top: 8px; padding-right: 8px;">
+          <div class="dropdown">
+           <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Navigate
+           <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li><a href="home.html">Home</a></li>
+              <li><a href="Sphaudio.html">Sphaudio</a></li>
+              <li><a href="Customize.html">Customization</a></li>
+            </ul>
+          </div>
+        </li>
+  </ul>
+ </div>
+</div>
+</nav> 
+
+ <body>
+  <div class="textContainer">
+     <h2 class="text-center"><p>Welcome to Sphaudio!</p><p>On this site you can do blah blah blah.</p><p>To begin, upload a song below</p><br><br><button type="submit" class="btn btn-default" align: center>Upload Song</button></h2>
+</div>
+</body>
+</html>
