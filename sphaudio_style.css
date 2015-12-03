@@ -1,12 +1,12 @@
 html, body, .container-table {
     height: 100%;
-    background-color: #D4D9DE;
 }
 
-.container-table {
-    display: 
-    vertical-align: middle;
+
+.navbar-custom {
+    /*background-color: #E8E8E8;*/
 }
+
 .vertical-center-row {
     display: table-cell;
     vertical-align: middle;
@@ -22,13 +22,14 @@ html, body, .container-table {
     text-align: middle;
     display: inline-block;
     position: absolute;
+    background-color: #93BDDD;
   	top: 50%;
   	left: 50%;
   	transform: translate(-50%, -50%);
 }
 .button {
 	text-align:center;
-	margin:auto;
+	margin: auto;
 }
 
 .drop
