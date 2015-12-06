@@ -6,8 +6,9 @@
     <link rel='stylesheet' type='text/css' href='http://www.x3dom.org/download/x3dom.css'></link> 
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="sphaudio_style.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="sphaudio_style.css">
+    <link rel="stylesheet" type="text/css" href="sample.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
@@ -15,7 +16,7 @@
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="home.html">Sphaudio</a>
+          <a class="navbar-brand" href="index.html">Sphaudio</a>
         </div>
         <div>
             <ul class="nav navbar-nav navbar-right">
@@ -35,20 +36,24 @@
     </div>
 </nav> 
 
-    <h1>
-        <p>Welcome to Sphaudio!</p>
-        <p>On this site you can do blah blah blah.</p>
-        <p>To begin, upload a song below</p>
-    </h1>
-
-    <body>
-        <div id="content" class="textContainer">
-            <form>
-                <input name="song" type="file" accept="audio/*">
-                <input type="submit">
-            </form>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Welcome to Sphaudio!</h1>
+            <p>Users can now visualize their own music!</p>
+            <p>To begin, upload a song below </p>
         </div>
-    </body>
+    </div>
+
+    <div id="content">
+        <form>
+            <input name="song" type="file" accept="audio/*">
+            <br>
+            <input type="submit">
+        </form>
+    </div>
+</body>
+
 </html>
 
 <div style="position:fixed; left:0px; bottom:0px; padding: 5px; height:30px; width:100%; color:black;" class="panel-footer">
