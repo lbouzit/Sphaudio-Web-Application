@@ -120,10 +120,9 @@ $(document).ready(function () {
   audioSrc.connect(analyser);
   audioSrc.connect(audioCtx.destination);
 
-  //var frequencyData = new Uint8Array(analyser.frequencyBinCount);
   var frequencyData = new Uint8Array(200);
 
-  var svgHeight = '300';
+  var svgHeight = '400';
   var svgWidth = '1200';
   var barPadding = '1';
 
@@ -295,6 +294,8 @@ $(document).ready(function () {
      // Update d3 chart with new data.
      svg.selectAll('rect')
         .data(frequencyData)
+        .attr('rx', 20)
+        .attr('ry', 20)
         .attr('y', function(d) {
            return svgHeight - d;
         })
@@ -302,7 +303,7 @@ $(document).ready(function () {
            return d;
         })
         .attr('fill', function(d) {
-           return 'rgb(0, 150, ' + d + ')';
+           return 'rgb(200, 0,' + d + ')';
         });
       }
 

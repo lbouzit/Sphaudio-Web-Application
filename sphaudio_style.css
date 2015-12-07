@@ -1,34 +1,13 @@
-html, body, .container-table {
-    height: 100%;
-    background-color: #D4D9DE;
-}
-
-.container-table {
-    display: 
-    vertical-align: middle;
-}
-.vertical-center-row {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.browse .textContainer { 
-    height: 430px; 
-    line-height: 400px;
-}
-
-h1 {
-    vertical-align: middle;
+.jumbotron {
     text-align: center;
-    display: inline-block;
-    position: absolute;
-  	top: 20%;
-  	left: 50%;
-  	transform: translate(-50%, -50%);
-}
-.button {
-	text-align:center;
-	margin:auto;
 }
 
-.drop
+#content {
+    text-align: center;
+    margin: 0 auto;
+    width: 150px;
+}
+
+body {
+	width: auto;
+}
