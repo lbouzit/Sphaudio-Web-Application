@@ -1,3 +1,5 @@
+
+
 function generateBackdrop(scale, shape_no, x, y, z, color)
 {
 	// get position from x y z cordinates
@@ -44,6 +46,7 @@ function generateBackdrop(scale, shape_no, x, y, z, color)
 	scene.appendChild(trans);
 }
 
+
 function generateSphere(shape_no, x, y, z, color)
 {
 
@@ -88,91 +91,15 @@ function generateSphere(shape_no, x, y, z, color)
 	shape_node.appendChild(app_node);
 	trans.appendChild(shape_node);
 	scene.appendChild(trans);
-
-	// time sensor
-	var time_sensor = document.createElement("timeSensor");
-	var time_sensor_id = shape_no + "time_route_id";
-	time_sensor.setAttribute("id", time_sensor_id);
-	time_sensor.setAttribute("DEF", "time");
-	time_sensor.setAttribute("cycleInterval", "4");
-	time_sensor.setAttribute("loop", "true");
-
-	// position interpolator
-	var pos_interpolator = document.createElement("PositionInterpolator");
-	var pos_id = shape_no + "pos_int";
-	pos_interpolator.setAttribute("id", pos_id);
-	pos_interpolator.setAttribute("DEF", "move");
-	pos_interpolator.setAttribute("key", "0 0.5 1");
-
-	var frame_init = x + " 0 " + z;
-	var frame_peak = x + " 15 " + z;
-	var key_frames = frame_init + "  " + frame_peak + "  " + frame_init;
-	pos_interpolator.setAttribute("keyValue", key_frames);
-
-	// bind position interpolator to time sensor
-	var pos_route = document.createElement("route");
-	var pos_route_id = shape_no + "pos_route";
-	pos_route.setAttribute("id", pos_route_id);
-	pos_route.setAttribute("fromNode", "time");
-	pos_route.setAttribute("fromField", "fraction_changed");
-	pos_route.setAttribute("toNode", "move");
-	pos_route.setAttribute("toField", "set_fraction");
-
-	// bind sphere to position interpolator
-	var time_route = document.createElement("route");
-	var time_route_id = shape_no + "time_route";
-	time_route.setAttribute("id", time_route_id);
-	time_route.setAttribute("fromNode", "move");
-	time_route.setAttribute("fromField", "value_changed");
-	time_route.setAttribute("toNode", "ball");
-	time_route.setAttribute("toField", "translation");
-
-	// configure DOM tree for animation
-	scene.appendChild(time_sensor);
-	scene.appendChild(pos_interpolator);
-	scene.appendChild(pos_route);
-	scene.appendChild(time_route);
 }
 
-// first row of spheres
-generateSphere("0", "6","0","3","green");
-generateSphere("1", "3","0","3","green");
-generateSphere("2", "0","0","3","green");
-generateSphere("3", "-3","0","3","green");
-generateSphere("4", "-6","0","3","green");
+function set_position(shape_no, x, y, z)
+{
+     // get position from x y z cordinates
+	var position = x + " " + y + " " + z;
+	var trans_id = shape_no + "trans";
+     var trans = document.getElementById(trans_id);
+	trans.setAttribute("translation", position);
+}
 
-// second row of spheres
-generateSphere("5", "6","0","6","green");
-generateSphere("6", "3","0","6","green");
-generateSphere("7", "0","0","6","green");
-generateSphere("8", "-3","0","6","green");
-generateSphere("9", "-6","0","6","green");
-
-// third row of spheres
-generateSphere("10", "6","0","15", "green");
-generateSphere("11", "3","0","15", "green");
-generateSphere("12", "0","0","15", "green");
-generateSphere("13", "-3","0","15", "green");
-generateSphere("14", "-6","0","15", "green");
-
-// fourth row of spheres
-generateSphere("15", "6","0","12","green");
-generateSphere("16", "3","0","12","green");
-generateSphere("17", "0","0","12","green");
-generateSphere("18", "-3","0","12","green");
-generateSphere("19", "-6","0","12","green");
-
-// fifth row of spheres
-generateSphere("20", "6","0","9","green");
-generateSphere("21", "3","0","9","green");
-generateSphere("22", "0","0","9","green");
-generateSphere("23", "-3","0","9","green");
-generateSphere("24", "-6","0","9","green");
-
-//               scake           x y z         color
-//generateBackdrop("20 1 20", "9", "0","-2","0", "blue");
-//generateBackdrop("1 20 20", "11", "-20","0","-0", "black");
-//generateBackdrop("1 20 20", "12", "20","0","0", "black");
-//generateBackdrop("20 20 1", "12", "0","0","20", "black");
-//generateBackdrop("20 20 1", "12", "0","0","20", "black");
-//generateBackdrop("20 1 20", "12", "0","20","0", "black");
+generateSphere("0", "0", "0", "0", "red");
