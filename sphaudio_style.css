@@ -15,10 +15,12 @@ html, body, .container-table {
 .browse .textContainer { 
     height: 430px; 
     line-height: 400px;
+
+.jumbotron {
+    text-align: center;
 }
 
-h1 {
-    vertical-align: middle;
+#content {
     text-align: center;
     display: inline-block;
     position: absolute;
@@ -31,4 +33,11 @@ h1 {
 	margin: auto;
 }
 
-.drop
+.drop {
+    margin: 0 auto;
+    width: 150px;
+}
+
+body {
+    background-color: black;
+}
