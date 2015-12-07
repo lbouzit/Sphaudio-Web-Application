@@ -39,18 +39,7 @@
         </div>
     </nav>
 
-        <body> 
-            <x3d width='600px' height='500px'>
-            	<scene id ="scene">
-                    <background  skyColor="0 0 0"></background>
-                    <PointLight id='point' on='TRUE' intensity='0.9000' color='0.0 0.6 0.0' location='0 15 0 ' radius='100.0000' >  </PointLight> 
-                    <Viewpoint id="front" position="0 10 -30" orientation="0.00000 -1.00000 0.00000 3.15833" description="camera"></Viewpoint>
-            	</scene>
-            </x3d>
-            <br>
-
-            <script type="text/javascript" src="app.js"></script>
-
+        <body>
             <audio id="audioElement" src="./audio/Odesza - Above The Middle.mp3"></audio>
             <div class="container-fluid" style="text-align: center; width:100%; margin: 0 auto;">
                 <button type="button" class="btn btn-primary" onclick="document.getElementById('audioElement').play()">Play Music</button>
@@ -58,6 +47,88 @@
                 <button type="button" class="btn btn-success" onclick="document.getElementById('audioElement').volume+=0.1">Increase Volume</button>
                 <button type="button" class="btn btn-success" onclick="document.getElementById('audioElement').volume-=0.1">Decrease Volume</button>
             </div>
+
+            <br>
+
+            <div id="blackbox"> 
+                <x3d width='600px' height='500px'>
+                    <scene id ="scene">
+                        <background  skyColor="0 0 0"></background>
+                        <PointLight id='point' on='TRUE' intensity='0.9000' color='0.0 0.6 0.0' location='0 15 0 ' radius='100.0000' >  </PointLight> 
+                        <Viewpoint id="front" position="0 10 -30" orientation="0.00000 -1.00000 0.00000 3.15833" description="camera"></Viewpoint>
+                    </scene>
+                </x3d>
+            </div>
+            <script type="text/javascript" src="app.js"></script>
+
+            <br>
+            <br>
+
+            <div id="visualizer"></div>
+
+            <div id="tableWrapper">
+                <div id="songChoice" class="container">          
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Song</th>
+                                <th>Artist</th>
+                                <th>Album</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr onclick="alert('you have clicked')">
+                                <td>Above The Middle</td>
+                                <td>Odesza</td>
+                                <td>Unknown</td>
+                            </tr>
+                            <tr onclick="alert('you have clicked')">
+                                <td>Mary</td>
+                                <td>Moe</td>
+                                <td>mary@example.com</td>
+                            </tr>
+                            <tr onclick="alert('you have clicked')">
+                                <td>July</td>
+                                <td>Dooley</td>
+                                <td>july@example.com</td>
+                            </tr>
+                            <tr onclick="alert('you have clicked')">
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                            </tr>
+                            <tr onclick="alert('you have clicked')">
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                            </tr>
+                            <tr onclick="alert('you have clicked')">
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                            </tr>
+                            <tr onclick="alert('you have clicked')">
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                            </tr>
+                            <tr onclick="alert('you have clicked')">
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                            </tr>
+                            <tr onclick="alert('you have clicked')">
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <br>
+            <br>
         </body> 
     </html>
 

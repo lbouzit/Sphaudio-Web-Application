@@ -38,6 +38,31 @@ html, body, .container-table {
     width: 150px;
 }
 
+#tableWrapper {
+	position: relative;
+}
+
+#songChoice {
+	height:150px;
+  	overflow:auto;  
+  	margin-top:20px;
+  	border-collapse: separate;
+}
+
+#tableWrapper thead th .text {
+	position: absolute;
+}
+
+#blackbox {
+	text-align: center;
+	margin: 0 auto;
+	width: 600px;
+}
+
+#visualizer {
+
+}
+
 body {
     background-color: black;
 }

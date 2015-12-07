@@ -122,7 +122,7 @@ $(document).ready(function () {
 
   var frequencyData = new Uint8Array(200);
 
-  var svgHeight = '400';
+  var svgHeight = '300';
   var svgWidth = '1200';
   var barPadding = '1';
 
@@ -130,7 +130,7 @@ $(document).ready(function () {
     return d3.select(parent).append('svg').attr('height', height).attr('width', width);
   }
 
-  var svg = createSvg('body', svgHeight, svgWidth);
+  var svg = createSvg('#visualizer', svgHeight, svgWidth);
 
   // Create our initial D3 chart.
   svg.selectAll('rect')
