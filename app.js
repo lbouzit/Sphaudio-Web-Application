@@ -166,28 +166,132 @@ $(document).ready(function () {
         var sum = 0;
 
         // sample points in range
-        for(var i = start_index; i < end_index; ++i)
+        for(var index = start_index; index < end_index; ++index)
         {
-          var this_point = frequencyData[i];
+          var this_point = frequencyData[index];
           sum += this_point;
         }
-        //var avg_amplitude = sum / range * 0.05;
-        set_position("0", "6", avg_amplitude, "3");
-    }
+        var avg_amplitude = sum / range * 0.05;
+
+        // FIRST ROW
+
+        if(i == 0)
+        {
+          set_position("0", "6", avg_amplitude, "3");
+        }
+        if(i == 1)
+        {
+          set_position("1", "3", avg_amplitude, "3");
+        }
+        if(i == 2)
+        {
+          set_position("2", "0", avg_amplitude, "3");
+        }
+        if(i == 3)
+        {
+          set_position("3", "-3", avg_amplitude, "3");
+        }
+        if(i == 4)
+        {
+          set_position("4", "-6", avg_amplitude, "3");
+        }
+
+        // SECOND ROW
+
+        if(i == 5)
+        {
+          set_position("5", "6", avg_amplitude, "6");
+        }
+        if(i == 6)
+        {
+          set_position("6", "3", avg_amplitude, "6");
+        }
+        if(i == 7)
+        {
+          set_position("7", "0", avg_amplitude, "6");
+        }
+        if(i == 8)
+        {
+          set_position("8", "-3", avg_amplitude, "6");
+        }
+        if(i == 9)
+        {
+          set_position("9", "-6", avg_amplitude, "6");
+        }
+
+        // THIRD ROW
+
+        if(i == 10)
+        {
+          set_position("10", "6", avg_amplitude, "15");
+        }
+        if(i == 11)
+        {
+          set_position("11", "3", avg_amplitude, "15");
+        }
+        if(i == 12)
+        {
+          set_position("12", "0", avg_amplitude, "15");
+        }
+        if(i == 13)
+        {
+          set_position("13", "-3", avg_amplitude, "15");
+        }
+        if(i == 14)
+        {
+          set_position("14", "-6", avg_amplitude, "15");
+        }
+
+        // FOURTH ROW
+
+        if(i == 15)
+        {
+          set_position("15", "6", avg_amplitude, "12");
+        }
+        if(i == 16)
+        {
+          set_position("16", "3", avg_amplitude, "12");
+        }
+        if(i == 17)
+        {
+          set_position("17", "0", avg_amplitude, "12");
+        }
+        if(i == 18)
+        {
+          set_position("18", "-3", avg_amplitude, "12");
+        }
+        if(i == 19)
+        {
+          set_position("19", "-6", avg_amplitude, "12");
+        }
 
 
-/*
-    if(jitter)
-    {
-        set_position("0", "6", "10", "3");
-        jitter = false;
+        // THIRD ROW
+
+        if(i == 20)
+        {
+          set_position("20", "6", avg_amplitude, "9");
+        }
+        if(i == 21)
+        {
+          set_position("21", "3", avg_amplitude, "9");
+        }
+        if(i == 22)
+        {
+          set_position("22", "0", avg_amplitude, "9");
+        }
+        if(i == 23)
+        {
+          set_position("23", "-3", avg_amplitude, "9");
+        }
+        if(i == 24)
+        {
+          set_position("24", "-6", avg_amplitude, "9");
+        }
+
+      
     }
-    else
-    {
-        set_position("0", "6", "5", "3");
-        jitter = true;
-    }
-*/
+
      // Update d3 chart with new data.
      svg.selectAll('rect')
         .data(frequencyData)
@@ -243,3 +347,5 @@ generateSphere("21", "3","0","9","green");
 generateSphere("22", "0","0","9","green");
 generateSphere("23", "-3","0","9","green");
 generateSphere("24", "-6","0","9","green");
+
+//-----------------------------------------------------------------------

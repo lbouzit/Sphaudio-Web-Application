@@ -5,15 +5,17 @@
             <link rel='stylesheet' type='text/css' href='http://www.x3dom.org/download/x3dom.css'></link> 
 
               <meta name="viewport" content="width=device-width, initial-scale=1">
+              <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
               <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
               <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
               <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+              <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
         </head>
 
         <nav class="navbar navbar-default">
           <div class="container-fluid">
             <div class="navbar-header">
-              <a class="navbar-brand" href="home.html">Sphaudio</a>
+              <a class="navbar-brand" href="index.html">Sphaudio</a>
             </div>
           <div>
             <ul class="nav navbar-nav navbar-right">
@@ -22,9 +24,9 @@
                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Navigate
                    <span class="caret"></span></button>
                     <ul class="dropdown-menu">
-                      <li><a href="home.html">Home</li>
+                      <li><a href="index.html">Home</a></li>
                       <li><a href="Sphaudio.html">Sphaudio</a></li>
-                      <li><a href="Customize.html">Customization</li>
+                      <li><a href="Customize.html">Customization</a></li>
                     </ul>
                   </div>
                 </li>
@@ -41,8 +43,18 @@
                     <Viewpoint id="front" position="0 10 -30" orientation="0.00000 -1.00000 0.00000 3.15833" description="camera"></Viewpoint>
             	</scene>
             </x3d>
+            <br>
 
-            <script type="text/javascript" src="sphaudio.js"></script>
+            <script type="text/javascript" src="app.js"></script>
+
+            <audio id="audioElement" src="./audio/Odesza - Above The Middle.mp3"></audio>
+            <div class="container-fluid">
+              <button type="button" class="btn btn-primary" onclick="document.getElementById('audioElement').play()">Play Music</button>
+              <button type="button" class="btn btn-danger" onclick="document.getElementById('audioElement').pause()">Pause Music</button>
+              <button type="button" class="btn btn-success" onclick="document.getElementById('audioElement').volume+=0.1">Increase Volume</button>
+              <button type="button" class="btn btn-success" onclick="document.getElementById('audioElement').volume-=0.1">Decrease Volume</button>
+            </div>
+
         </body> 
     </html>
 
