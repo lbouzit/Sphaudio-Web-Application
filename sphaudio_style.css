@@ -1,41 +1,15 @@
-html, body, .container-table {
-    height: 100%;
-}
-
-
-.navbar-custom {
-    /*background-color: #E8E8E8;*/
-}
-
-.vertical-center-row {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.browse .textContainer { 
-    height: 430px; 
-    line-height: 400px;
-
 .jumbotron {
     text-align: center;
 }
 
 #content {
     text-align: center;
-    display: inline-block;
-    position: absolute;
-  	top: 20%;
-  	left: 50%;
-  	transform: translate(-50%, -50%);
-}
-.button {
-	text-align:center;
-	margin: auto;
-}
-
-.drop {
     margin: 0 auto;
     width: 150px;
+}
+
+body {
+	width: auto;
 }
 
 #tableWrapper {
@@ -61,10 +35,4 @@ html, body, .container-table {
 
 #visualizer {
 
-}
-
-body {
-    background-color: black;
-}
-	width: auto;
 }
