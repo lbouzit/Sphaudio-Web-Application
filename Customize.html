@@ -69,8 +69,7 @@
 	function ThemeClick(theme) {
 		if (theme === 1){
 			document.getElementById("ThemeSample").src = "default.png";
-			document.getElementById("Theme1").class = "btn btn-info active";
-      check = 1;
+      check = 1;   
 		}
 		if (theme === 2){
 			document.getElementById("ThemeSample").src = "warm.png";
@@ -81,23 +80,22 @@
       check = 3;
     }
     if (theme === 4){
-      
       document.getElementById("ThemeSample").src = "Theme4.png";
       check = 4;
     }     
   }
   function ThemeSave() {
     if (check === 1){
-      document.getElementById("CustomizeStyle").href = "Theme1.css"
+      window.location = "/Sphaudio.html?x=1"
     }
     if (check === 2){
-      document.getElementById("CustomizeStyle").href = "Theme2.css"
+      window.location = "/Sphaudio.html?x=2"
     }
     if (check === 3){
-      document.getElementById("CustomizeStyle").href = "Theme3.css"
+      window.location = "/Sphaudio.html?x=3"
     }
     if (check === 4){
-      document.getElementById("CustomizeStyle").href = "Theme4.css"
+      window.location = "/Sphaudio.html?x=4"
     } 
   }
 </script>
