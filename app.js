@@ -166,6 +166,41 @@ $(document).ready(function () {
 
     function animate() {
 
+      var c1,c2,c3,c4,c5;
+      var themeNum = window.location.search.replace("?", "");
+      if (themeNum == "1") {
+        console.log("theme 1");
+        c1 = 0x35A8DC;
+        c2 = 0x349396;
+        c3 = 0xCFB028;
+        c4 = 0xF4EF89;
+        c5 = 0xE1094E;
+      }
+      else if (themeNum == "2") {
+        console.log("theme 2");
+        c1 = 0xEEC438;
+        c2 = 0xFC960F;
+        c3 = 0xF7480E;
+        c4 = 0xF7154D;
+        c5 = 0xB10778;
+      }
+      else if (themeNum == "3") {
+        console.log("theme 3");
+        c1 = 0x91C9C1;
+        c2 = 0x3F90B5;
+        c3 = 0x368992;
+        c4 = 0x105B57;
+        c5 = 0x608A82;
+      }
+      else {
+        console.log("no theme");
+        c1 = 0x00B6FF;
+        c2 = 0x00B6FF;
+        c3 = 0x00B6FF;
+        c4 = 0x00B6FF;
+        c5 = 0x00B6FF;
+      }
+
         for(var i = 0; i < num_spheres; ++i)
         {
 
@@ -186,6 +221,22 @@ $(document).ready(function () {
             var avg_amplitude = amp_sum / span;
             sphere_.position.set(sphere_.position.x, avg_amplitude, sphere_.position.y);
             //sphere_.material.color.setRGB(150.0, avg_amplitude / 100.0, 0.0);
+            var modVal = (i+1)%5;
+            if (modVal == 1) {
+              sphere_.material.color.setHex(c1);
+            }
+            else if (modVal == 2) {
+              sphere_.material.color.setHex(c2);
+            }
+            else if (modVal == 3) {
+              sphere_.material.color.setHex(c3);
+            }
+            else if (modVal == 4) {
+              sphere_.material.color.setHex(c4);
+            }
+            else if (modVal == 0) {
+              sphere_.material.color.setHex(c5);
+            }
 
         }
         requestAnimationFrame( animate );
